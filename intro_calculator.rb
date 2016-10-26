@@ -10,10 +10,10 @@ until operacion == "exit" do
   puts "Type your operation (sum, rest, mult, div, pow)"
   operacion = gets.chomp
   case operacion
-  when "mas" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1+operador2}"
-  when "menos" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1-operador2}"
-  when "por" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1*operador2}"
-  when "division" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1/operador2}"
+  when "+", "suma", "sumemelos" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1+operador2}"
+  when "-" , "menos" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1-operador2}"
+  when "*" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1*operador2}"
+  when "/" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1/operador2}"
   when "pow" then puts "La operacion es : #{operador1} #{operacion} #{operador2} = #{operador1**operador2}"
   end
 end
