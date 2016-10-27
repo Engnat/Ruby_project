@@ -67,3 +67,9 @@ else
   puts "Buen trabajo"
 end
 end
+
+
+my_array = Array.new
+my_array = []
+my_hash = Hash.new
+my_hash = {name: "Engie" }# name: != "name"
