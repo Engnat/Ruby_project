@@ -1,4 +1,4 @@
-products = ["Negan",
+   products = ["Negan",
  "Glen Eating Pizza",
  "Glen eye out of his head",
  "Abraham",
@@ -16,7 +16,7 @@ products = ["Negan",
 products_characteristics ={}
 products.each_with_index do |p , i|
   products_characteristics[p] = {#llave = |p| nombre de disfraz
-    cost: 10,
+    cost: rand(10),
     color: "undefined",
     index_product: i
   }
@@ -50,7 +50,7 @@ while user_character != "exit"
 
       if matched_index.include? user_character
         puts "Your costume selection was: #{products[user_character]}"
-        puts "Do you want to buy it? #{products_characteristics[products[user_character]][:cost]} (yes/no)"
+        puts "Do you want to buy it? #{products_characteristics[products[user_character]][:cost]} dineros (yes/no)"
 
         if gets.chomp.downcase == "yes"
           shopping_car[products[user_character]] = "purshased"
