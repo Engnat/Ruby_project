@@ -1,0 +1,28 @@
+@personas = 8
+@cocos_prueba = 10
+@numero_cocos = @cocos_prueba
+@resto_en_monton = 10
+@interador = 0
+
+begin#do while
+  @resto_en_monton = @numero_cocos - 1#se reduce el monto en uno ya que se lo dan al mico
+  if @resto_en_monton < @personas  or
+    @interador > @personas  or
+    @resto_en_monton % @personas != 0
+    #begin if
+        puts "#{@cocos_prueba} No es una solución #{@personas}"
+      @interador = 0
+      @cocos_prueba += 1
+      @numero_cocos = @cocos_prueba
+      puts "#{@cocos_prueba}"
+  end
+  if @resto_en_monton % @personas == 0
+    @resto_en_monton = (@personas - 1) * @resto_en_monton / @personas
+    @interador += 1
+    @numero_cocos = @resto_en_monton
+  end
+end while @resto_en_monton % @personas != 0  or @interador != @personas #si el mod de resto_en_monton y personas es diferente de 0
+#o el iterador  es diferente a la cantidad de personas se sale del ciclo
+
+puts "#{@cocos_prueba} Esta es la cantidad de cocos que recolectaron las #{@personas} personas"
+puts "Quedan #{@resto_en_monton} cocos para repartir a la mañana siguiente"
